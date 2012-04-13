@@ -11,24 +11,24 @@ It is fully transparent - by using SOAP & REST API anyone can:
  - generate karma QR cheques - for real-life karma exchange
  - generate karma transfer templates - for website buttons
 
-Android App
+Android App (@mpawel)
 -----------
 
-*TODO: screenshots & description of android app (Paweł)*
+*TODO: screenshots & description of android app*
 
 ### QR Cheques
 
-*TODO: description of QR cheques (Paweł)*
+*TODO: description of QR cheques*
 
-Desktop App
+Desktop App (Łukasz)
 -----------
 
-*TODO: screenshots & description of desktop app (Łukasz)*
+*TODO: screenshots & description of desktop app*
 
-Web Browser
------------
+Web App (@mafik)
+-------
 
-*TODO: screenshots & description of website (Marek)*
+*TODO: screenshots & description of website*
 
 Architecture
 ------------
@@ -43,14 +43,22 @@ Architecture
 	/Desktop     - Desktop Application
 	/Node        - Website & REST API server
 
-### SOAP API
+### SOAP API (Łukasz)
 
 Provided by Java WebService
 
-*TODO: detailed api description (Łukasz)*
+*TODO: detailed api description*
 
-### REST API
+### REST API (@mafik)
+	
+*TODO: detailed api description*
 
-Provided by Node
+#### Server
 
-*TODO: detailed api description (Marek)*
+Setup:
+
+    cd Node && npm install
+	
+Running (inside `/Node`):
+
+    node app.js

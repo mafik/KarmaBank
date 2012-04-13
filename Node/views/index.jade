@@ -1,0 +1,6 @@
+h1= title
+p Witaj w #{title}. Za pomocą tej strony możesz oglądać historie tranzakcji oraz stany kont. Aby przyjrzeć się bliżej jakiemuś kontu, wpisz jego nazwę w pole poniżej:
+
+form(action="/view/",method="GET")
+  input(name="name",placeholder="Adres e-mail")
+  input(type="submit",value="Zobacz")
