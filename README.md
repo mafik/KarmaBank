@@ -4,6 +4,7 @@ KarmaBank
 KarmaBank is a service that stores karma points associated with users' emails.
 
 It is fully transparent - by using SOAP & REST API anyone can:
+
  - check others karma
  - graph incoming & outgoing karma for any account
  - initiate karma transfers
