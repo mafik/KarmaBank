@@ -30,7 +30,8 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', routes.index);
-app.get('/view/', routes.view);
+app.get('/view/:user?', routes.view);
+app.get('/json/:user?', routes.json);
 
 app.listen(3000);
-console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+console.log("KarmaBank server listening on port %d in %s mode", app.address().port, app.settings.env);
