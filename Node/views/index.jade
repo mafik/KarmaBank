@@ -1,12 +1,27 @@
-h1= title
 
-- var error, karma;
+- var error, email, balance, history;
+
+if email
+  h1= email
+else
+  h1 KarmaBank
 
 if error
   #error= error
 
-if karma
-  #karma(title='Bilans karmy zgromadzonej przez #{title}')= karma
+if balance
+  #balance(title='Bilans dla #{email}')= balance
+
+if history
+  ul#history
+    each entry in history
+      li(id=entry.ChequeId)
+        time= entry.Timestamp + ": "
+        .direction
+          a(href="/view/" + entry.Source)= entry.Source
+          &rarr; #{new Number(entry.Amount)} &rarr;
+          a(href="/view/" + entry.Destination)= entry.Destination
+        .description= entry.Description
 
 form#find(action="/view/",method="GET")
   input(name="email",placeholder="Adres e-mail")

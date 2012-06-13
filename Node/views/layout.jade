@@ -1,9 +1,8 @@
 !!! 5
 html
   head
-    title= title
-    link(href='http://fonts.googleapis.com/css?family=Averia+Libre:400,700', rel='stylesheet', type='text/css')
-    script(src='http://code.jquery.com/jquery.min.js')
+    title KarmaBank
+    script(src='/javascripts/jquery.min.js')
     :coffeescript
       window.view = (name) ->
         $.getJSON '/json/' + name, (data) -> console.log JSON.stringify data
@@ -11,6 +10,18 @@ html
       $ () ->
         $('#api h2').click () -> $('#api .desc').slideToggle()
     :stylus
+      @font-face
+        font-family 'Averia Libre'
+        font-style normal
+        font-weight 400
+        src local('Averia Libre Regular'), local('AveriaLibre-Regular'), url('/stylesheets/rYVgHZZQICWnhjguGsBspInF5uFdDttMLvmWuJdhhgs.ttf') format('truetype')
+
+      @font-face
+        font-family 'Averia Libre'
+        font-style normal
+        font-weight 700
+        src local('Averia Libre Bold'), local('AveriaLibre-Bold'), url('/stylesheets/r6hGL8sSLm4dTzOPXgx5XX06qf9KHRHwsVx7iw5MXmY.ttf') format('truetype')
+
       html
         font-family sans
         text-align center
@@ -19,7 +30,7 @@ html
       html, input
         font-family: 'Averia Libre', cursive;
       h1
-        font-size 5em
+        font-size 4em
         color white
         text-shadow 0px 3px 0px #bbb, 0 0 15px white
       input 
@@ -28,16 +39,20 @@ html
         border none
         padding .2em
         margin .2em
-      #karma, #error
+      a
+        color black
+        color #182a31
+        text-shadow 0 0 2px #b9dcab
+      #balance, #error, #history
         margin-bottom 1em
-      #karma
+      #balance
         font-size 5em
       #error
         font-size 2em
       #error
         color black
         text-shadow 0px 2px 0px red, 0 0 15px red
-      #karma
+      #balance
         color #ddffaa
         text-shadow 0px 3px 0px #a3c86c, 0 0 15px white
       #api
@@ -49,4 +64,24 @@ html
         color #ab9874
       #api .desc
         display none
+      #history
+        width 50%
+        min-width 35em
+        margin 0 auto 2em auto
+        padding 1em
+        list-style none
+        background rgba(255,255,255,0.1)
+
+        time
+          float left
+          color #384a51
+
+        .direction
+          float right
+          color #182a31
+
+        .description
+          text-align left
+          color #fdce8c
+      
   body!= body
